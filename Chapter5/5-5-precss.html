@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
 <span class="el_beforeIcon el_beforeIcon__pdf"><a href="#">ファイル名.pdf</a></span>
 <span class="el_beforeIcon el_beforeIcon__excel"><a href="#">ファイル名.xlsx</a></span>
 <span class="el_beforeIcon el_beforeIcon__PP"><a href="#">ファイル名.pptx</a></span>
@@ -6,53 +8,59 @@
 
 <span class="el_afterIcon el_afterIcon__chevRight"><a href="#">進む</a></span>
 <style>
-/* before */
-.el_beforeIcon::before {
-  display: inline-block;
-  margin-right: .3em;
-  color: #e25c00;
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 400;
-}
+  /* before */
+  .el_beforeIcon::before {
+    display: inline-block;
+    margin-right: .3em;
+    color: #e25c00;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 400;
+  }
 
-/* バリエーション */
-.el_beforeIcon.el_beforeIcon__pdf::before {
-  content: '\f1c1';
-}
-.el_beforeIcon.el_beforeIcon__excel::before {
-  content: '\f1c3';
-}
-.el_beforeIcon.el_beforeIcon__PP::before {
-  content: '\f1c4';
-}
-.el_beforeIcon.el_beforeIcon__checkSquare::before {
-  content: '\f14a';
-}
-.el_beforeIcon.el_beforeIcon__chevLeft::before {
-  content: '';
-  width: .375em;
-  height: .375em;
-  border-bottom: .125em solid #e25c00;
-  border-left: .125em solid #e25c00;
-  transform: rotate(45deg) translateY(-30%);
-}
+  /* バリエーション */
+  .el_beforeIcon.el_beforeIcon__pdf::before {
+    content: '\f1c1';
+  }
 
-/* after */
-.el_afterIcon::after {
-  display: inline-block;
-  margin-left: .3em;
-  color: #e25c00;
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-}
+  .el_beforeIcon.el_beforeIcon__excel::before {
+    content: '\f1c3';
+  }
 
-.el_afterIcon.el_afterIcon__chevRight::after {
-  content: '';
-  width: .375em;
-  height: .375em;
-  border-top: .125em solid #e25c00;
-  border-right: .125em solid #e25c00;
-  transform: rotate(45deg);
-}
+  .el_beforeIcon.el_beforeIcon__PP::before {
+    content: '\f1c4';
+  }
 
+  .el_beforeIcon.el_beforeIcon__checkSquare::before {
+    content: '\f14a';
+  }
+
+  /* 三角形の一辺がない矢印を「chevron」と呼ぶ */
+  .el_beforeIcon.el_beforeIcon__chevLeft::before {
+    content: '';
+    width: .375em;
+    height: .375em;
+    /* ショートハンド(時計回り)で記載する */
+    border-bottom: .125em solid #e25c00;
+    border-left: .125em solid #e25c00;
+    transform: rotate(45deg) translateY(-30%);
+  }
+
+  /* after */
+  /* 行頭(before)と逆にするだけ */
+  .el_afterIcon::after {
+    display: inline-block;
+    margin-left: .3em;
+    color: #e25c00;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+  }
+
+  .el_afterIcon.el_afterIcon__chevRight::after {
+    content: '';
+    width: .375em;
+    height: .375em;
+    border-top: .125em solid #e25c00;
+    border-right: .125em solid #e25c00;
+    transform: rotate(45deg);
+  }
 </style>

@@ -1,11 +1,12 @@
 .el_beforeIconBtn {
   position: relative;
   display: inline-block;
-  padding: .2em .3em;
+  /* フォントサイズが変わる可能性のあるモジュールは余白を相対値で実装すると変更に強くなる */
+  padding: 0.2em 0.3em;
   border: 1px solid currentColor;
   color: #e25c00;
   text-decoration: none;
-  transition: .25s;
+  transition: 0.25s;
 }
 
 .el_beforeIconBtn:focus,
@@ -16,7 +17,7 @@
 
 .el_beforeIconBtn::before {
   display: inline-block;
-  margin-right: .5em;
-  font-family: 'Font Awesome 5 Free';
+  margin-right: 0.5em;
+  font-family: "Font Awesome 5 Free";
   font-weight: 900;
 }

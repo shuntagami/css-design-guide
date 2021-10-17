@@ -1,25 +1,29 @@
 <a class="el_roundedBtn" href="#">角丸ボタン</a>
 <link rel="stylesheet" href="btn-css-precss.css">
 <style>
-.el_roundedBtn {
-  display:  inline-block;
-  width:  236px;
-  max-width: 100%;
-  padding:  15px 10px;
-  background-color:  #e25c00;
-  border:  2px solid transparent;
-  border-bottom-color:  #d40152;
-  border-radius:  10px;
-  color:  #fff;
-  font-size:  1.125rem;
-  text-align:  center;
-  text-decoration:  none;
-  transition:  .25s;
-}
-.el_roundedBtn:focus,
-.el_roundedBtn:hover {
-  background-color:  #fff;
-  border-color:  currentColor;
-  color:  #e25c00;
-}
+  /* el_buttonと差異が多いためモディファイア「btn--rounded / el_btn__rounded」とはしない */
+  /* @why: モディファイア名から角丸以外の情報は予測できないから */
+  .el_roundedBtn {
+    display: inline-block;
+    width: 236px;
+    max-width: 100%;
+    padding: 15px 10px;
+    background-color: #e25c00;
+    /* ホバー時のみボタンが大きくなるのを防ぐためあらかじめ大きさを確保 */
+    border: 2px solid transparent;
+    border-bottom-color: #d40152;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.125rem;
+    text-align: center;
+    text-decoration: none;
+    transition: .25s;
+  }
+
+  .el_roundedBtn:focus,
+  .el_roundedBtn:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #e25c00;
+  }
 </style>

@@ -1,0 +1,23 @@
+<a class="el_btn el_btn__arrowRight" href="#">矢印付きボタン</a>
+<link rel="stylesheet" href="btn-css-precss.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<style>
+  .el_btn.el_btn__arrowRight {
+    position: relative;
+    padding-right: 2em;
+    padding-left: 1.38em;
+  }
+
+  .el_btn.el_btn__arrowRight::after {
+    content: '\f061';
+
+    position: absolute;
+    /* position: absolute; を適用している要素に対する天地中央揃えの常套手段 */
+    top: 50%;
+    transform: translateY(-50%);
+
+    right: .83em;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+  }
+</style>

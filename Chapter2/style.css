@@ -194,6 +194,7 @@ body {
 /* モジュール
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
+/* 子セレクタ */
 .bl_media_body > span {
   color: #555;
   font-size: 14px;
@@ -239,6 +240,7 @@ body {
   text-align: right;
 }
 
+/* 子孫セレクタ */
 .bl_media__rev .bl_media_imageWrapper {
   margin-right: 0;
 }

@@ -5,10 +5,14 @@
 
   <body>
     <article id="main" class="ly_cont">
+      <!-- 具体性が高すぎるbl_aboutService, bl_aboutMediaのような命名にはしない -->
+      <!-- PRECSSのモディファイア作成の規則は「元のクラス名__モディファイア名」=> bl_media__rev -->
+      <!-- モディファイアの数は変更を加える要素数と一致させるのではなく、役割一つにつきひとつ作成 -->
       <div class="bl_media bl_media__rev">
         <figure class="bl_media_imageWrapper bl_media_imageWrapper__borderd">
           <img src="./persona.jpg" alt="写真：手に持たれたスマホ" />
         </figure>
+        <!-- 子要素のクラス名の頭にはモジュール名(bo_media)を付ける -->
         <div class="bl_media_body">
           <h2 class="bl_media_title">ユーザーが考えた設計で満足な体験を</h2>
           <p>

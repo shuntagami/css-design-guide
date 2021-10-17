@@ -1,6 +1,6 @@
 <div class="bl_media">
   <figure class="bl_media_imgWrapper">
-    <img alt="写真：手に持たれたスマホ" src="/assets/img/elements/persona.jpg">
+    <img alt="写真：手に持たれたスマホ" src="../assets/img/elements/persona.jpg">
   </figure>
   <div class="bl_media_body">
     <h3 class="bl_media_ttl">
@@ -17,7 +17,7 @@
 
 <div class="bl_media bl_media__rev">
   <figure class="bl_media_imgWrapper">
-    <img alt="写真：手に持たれたスマホ" src="/assets/img/elements/persona.jpg">
+    <img alt="写真：手に持たれたスマホ" src="../assets/img/elements/persona.jpg">
   </figure>
   <div class="bl_media_body">
     <h3 class="bl_media_ttl">
@@ -34,7 +34,7 @@
 
 <div class="bl_halfMedia">
   <figure class="bl_halfMedia_imgWrapper">
-    <img alt="写真：手に持たれたスマホ" src="/assets/img/elements/persona.jpg">
+    <img alt="写真：手に持たれたスマホ" src="../assets/img/elements/persona.jpg">
   </figure>
   <div class="bl_halfMedia_body">
     <h3 class="bl_halfMedia_ttl">
@@ -50,13 +50,17 @@
 <!-- /.bl_halfMedia -->
 
 <style>
+  /* 画像とテキストを横並び、かつ天地中央揃えにする */
   .bl_media {
     display: flex;
     align-items: center;
   }
 
+  /* スクリーンサイズを縮小した際に画像、テキストを自然に縮小させるため */
   .bl_media_imgWrapper {
     flex: 0 1 27.58333%;
+    /* 完成図の画像とテキストの余白40pxをメイン幅の1200pxで割る */
+    /* @why: スクリーンサイズを縮小した際にも余白を小さくするため */
     margin-right: 3.33333%;
   }
 
@@ -69,6 +73,7 @@
   }
 
   .bl_media_body>*:last-child {
+    /* 上下の余白を管理している箇所はあらかじめ最後の子要素の余白を詰める設定をすることで要素が増減した場合も自動的に余白の制御を行える */
     margin-bottom: 0;
   }
 
@@ -83,6 +88,8 @@
   }
 
   @media screen and (max-width: 768px) {
+
+    /* メディアクエリ適用時は縦並びにしたいため、displayの値をblockにしてFlexboxを解除する */
     .bl_media {
       display: block;
     }
@@ -94,7 +101,9 @@
   }
 
   /* 逆位置 */
+  /* 左右の余白の取り方はなるべくmargin-rightで統一している */
   .bl_media.bl_media__rev {
+    /* 「横並びレイアウトで右から左に」 */
     flex-direction: row-reverse;
   }
 
@@ -120,6 +129,8 @@
   }
 
   .bl_halfMedia_imgWrapper {
+    /* 50%(600px)としていないのは画像とテキスト間の余白(40px)を按分しているため。 */
+    /* (600 - 20)/1200 * 100 = 48.333.. */
     flex: 0 1 48.33333%;
     margin-right: 3.33333%;
   }

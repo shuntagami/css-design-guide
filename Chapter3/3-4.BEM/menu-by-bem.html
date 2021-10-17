@@ -1,0 +1,36 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- モディファイアの付加。レイアウトをガラッと変更したい際にも使える。 -->
+  <!-- layout_inlineが二つのタイプのうちの「キーと値」。「何(layout)がどう(inline)であるか」を表現する。 -->
+  <!-- キーと値はアンダースコアで繋ぐ -->
+  <ul class="menu menu__layout_inline">
+    <li class="menu__item">
+      <!-- Elementの中にElememtがネストされた命名をしない ✖️menu__item__link -->
+      <!-- @why:特定のコンテキストにみだりに依存しない, 詳細度がみだりに高く無い -->
+      <a class="menu__link" href="tab1/">Tab 1</a>
+      <!-- .btn Blockを新たに作成した -->
+      <a class="btn" href="lp/">
+        <span class="btn__icon">ボタン</span>
+      </a>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="tab2/">Tab 2</a>
+    </li>
+    <!-- モディファイアの付加。BlockかElementのクラス名がある状態で二つ目以降のクラス名としてModifierをつける -->
+    <!-- activedは二つのタイプのうち「真偽値」にあたる -->
+    <li class="menu__item menu__item_actived">Tab 3</li>
+    <li class="menu__item">
+      <a class="menu__link" href="tab4/">Tab 4</a>
+    </li>
+  </ul>
+</body>
+<html>
+
+</html>
+
+</html>

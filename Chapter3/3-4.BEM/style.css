@@ -1,0 +1,43 @@
+/* button-by-bem */
+.button {
+  width: 160px;
+  height: 40px;
+}
+/* △ Modifireごとにスタイリング */
+/* .button_theme_caution {
+  background-color: red;
+}
+.button__text_theme_caution {
+  color: #fff;
+} */
+
+/* ○ 子孫セレクターを使用してModifierからElementを変更 */
+.button_theme_caution {
+  background-color: red;
+}
+.button_theme_caution .button__text {
+  color: #fff;
+}
+
+/* nested_block */
+/* 「.logoと.searchの間に余白を空けたい」 */
+/* 以下のように子(孫)セレクタを用いてスタイリングすることができるが詳細度が高くなるため推奨されていない */
+/* ✖️ .logoにスタイリングをしているので使い回す際に余白が邪魔になる */
+.head .logo {
+  margin-right: 30px;
+}
+
+/* nested_block_by_mix */
+/* ○ .head_logoにスタイリングをしている */
+/* ○ レイアウト(他の要素との位置関係を調整する)に絡む場合 → Mixでスタイリング */
+/* ヘッドBlockのElementとする(.head__logoをMixする)ことで「どこに配置するか」はヘッドBlockに委ねられる。 */
+.head__logo {
+  margin-right: 30px;
+}
+
+/* ○ そのBlock(またはElement)内で完結する場合 → Modifierでスタイリング */
+/* ロゴBlock内部に関してはヘッドBlockから基本的にコントロールしない */
+/* Modifierなどを使用し、ロゴBlockの責任範囲内で解決する */
+.logo_bordered {
+  border: 1px solid #000;
+}
